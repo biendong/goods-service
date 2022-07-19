@@ -15,4 +15,21 @@ public class GoodEntity extends Good {
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {return super.getId();}
+
+    @Override
+    @Column(name = "code")
+    public String getProductCode() {return super.getProductCode();}
+
+    @Override
+    @Column(name = "name")
+    public String getProductName() {return super.getProductName();}
+
+    @Override
+    @Column(name = "description")
+    public String getProductDescription() {return super.getProductDescription();}
+
+    @Override
+    @Column(name = "unitId")
+    public Integer getUnitId() { return super.getUnitId(); }
+
 }
