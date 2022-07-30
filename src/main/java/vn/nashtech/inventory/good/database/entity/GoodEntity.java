@@ -31,5 +31,7 @@ public class GoodEntity extends Good {
     @Override
     @Column(name = "unitId")
     public Integer getUnitId() { return super.getUnitId(); }
+    
+    
 
 }
