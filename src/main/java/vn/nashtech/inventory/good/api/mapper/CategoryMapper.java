@@ -4,10 +4,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Component;
 import vn.nashtech.inventory.good.api.dto.CategoryResponse;
 import vn.nashtech.inventory.good.api.dto.GoodResponse;
 import vn.nashtech.inventory.good.database.entity.CategoryEntity;
 
+@Component
 public class CategoryMapper {
 
   public List<CategoryResponse> mapToListRS(List<CategoryEntity> categoryEntities){
