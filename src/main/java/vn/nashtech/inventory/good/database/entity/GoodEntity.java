@@ -17,19 +17,19 @@ public class GoodEntity extends Good {
     public Long getId() {return super.getId();}
 
     @Override
-    @Column(name = "code")
+    @Column(name = "product_code")
     public String getProductCode() {return super.getProductCode();}
 
     @Override
-    @Column(name = "name")
+    @Column(name = "product_name")
     public String getProductName() {return super.getProductName();}
 
     @Override
-    @Column(name = "description")
+    @Column(name = "product_description")
     public String getProductDescription() {return super.getProductDescription();}
 
     @Override
-    @Column(name = "unitId")
+    @Column(name = "unit_id")
     public Integer getUnitId() { return super.getUnitId(); }
     
     
