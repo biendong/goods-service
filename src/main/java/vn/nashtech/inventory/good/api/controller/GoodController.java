@@ -12,6 +12,8 @@ import vn.nashtech.inventory.good.api.dto.GoodResponse;
 import vn.nashtech.inventory.good.api.mapper.GoodMapper;
 import vn.nashtech.inventory.good.service.GoodService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/good")
 public class GoodController {
@@ -61,5 +63,11 @@ public class GoodController {
     public ResponseEntity<?> delete(@ApiParam(value = "Good id",required=true) @PathVariable(value = "id") String id) {
         goodService.deleteGood(Long.parseLong(id));
         return ResponseEntity.ok("success");
+    }
+
+    @GetMapping("/list")
+    public ResponseEntity<?> getList() {
+        List<GoodResponse> response = goodMapper.mapToListRS(goodService.listGoods());
+        return ResponseEntity.ok(response);
     }
 }

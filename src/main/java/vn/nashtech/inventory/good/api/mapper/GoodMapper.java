@@ -1,9 +1,11 @@
 package vn.nashtech.inventory.good.api.mapper;
 
 import org.springframework.stereotype.Component;
+import vn.nashtech.inventory.good.api.dto.GoodListResponse;
 import vn.nashtech.inventory.good.api.dto.GoodResponse;
 import vn.nashtech.inventory.good.database.entity.GoodEntity;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;

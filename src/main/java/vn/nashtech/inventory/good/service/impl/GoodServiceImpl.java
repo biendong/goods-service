@@ -8,6 +8,10 @@ import vn.nashtech.inventory.good.database.entity.GoodEntity;
 import vn.nashtech.inventory.good.database.repository.GoodRepository;
 import vn.nashtech.inventory.good.service.GoodService;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 @Service
 @Slf4j
 public class GoodServiceImpl implements GoodService {
@@ -33,6 +37,14 @@ public class GoodServiceImpl implements GoodService {
             return goodRepository.save(good);
         }
         return null;
+    }
+
+    @Override
+    public List<GoodEntity> listGoods() {
+        Iterable<GoodEntity> goods = goodRepository.findAll();
+        List<GoodEntity> res = new ArrayList<>();
+        goods.forEach(res::add);
+        return res;
     }
 
     @Override
